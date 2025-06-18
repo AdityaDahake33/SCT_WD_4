@@ -1,0 +1,136 @@
+:root {
+      --bg-light: linear-gradient(135deg, #dff9fb, #c7ecee);
+      --bg-dark: linear-gradient(135deg, #2d3436, #636e72);
+      --text-light: #2d3436;
+      --text-dark: #dfe6e9;
+      --task-bg-light: #f1f2f6;
+      --task-bg-dark: #3d3d3d;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--bg-light);
+      color: var(--text-light);
+      margin: 0;
+      padding: 40px;
+      transition: all 0.3s ease;
+    }
+
+    .dark-mode {
+      background: var(--bg-dark);
+      color: var(--text-dark);
+    }
+
+    .container {
+      max-width: 700px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .dark-mode .container {
+      background: #2d3436;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .toggle-mode {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 10px;
+    }
+
+    .toggle-mode button {
+      background: #00cec9;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 20px;
+      color: white;
+      cursor: pointer;
+    }
+
+    .input-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    input[type="text"], input[type="datetime-local"], select {
+      flex: 1 1 200px;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    button.add-btn {
+      padding: 12px 24px;
+      border: none;
+      background-color: #00b894;
+      color: white;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    button.add-btn:hover {
+      background-color: #019875;
+      transform: scale(1.05);
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      padding: 14px;
+      background: var(--task-bg-light);
+      margin-bottom: 12px;
+      border-radius: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      transition: background 0.3s;
+    }
+
+    .dark-mode li {
+      background: var(--task-bg-dark);
+    }
+
+    .completed {
+      text-decoration: line-through;
+      color: #636e72;
+    }
+
+    .actions button {
+      margin-left: 8px;
+      padding: 6px 10px;
+      font-size: 0.9rem;
+      background: #2d3436;
+      color: white;
+      border-radius: 5px;
+    }
+
+    .actions button:hover {
+      background: #636e72;
+    }
+
+    .datetime {
+      font-size: 0.85rem;
+      color: #6c5ce7;
+      margin-top: 6px;
+    }
+
+    span {
+      max-width: 400px;
+      word-break: break-word;
+    }
